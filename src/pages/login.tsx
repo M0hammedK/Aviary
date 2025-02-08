@@ -10,7 +10,7 @@ export default function LoginPage() {
   const router = useRouter();
   const [error, setError] = useState("");
 
-  const token = getCookie("accessToken");
+  const token = getCookie("userRole");
   if (token) router.push("/");
 
   const handleSubmit = async (email: string, password: string) => {
